@@ -1,5 +1,15 @@
-let toggles = ["switch0" ,"switch1" ,"switch2" ,"switch3" ,"switch4"]
+const toggles = document.querySelectorAll("input")
 
-for(let toggles = 0; toggles)
-console.log(toggles)
-document.querySelectorAll
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+for(let i=0; i<toggles.length; i++){
+    toggles[i].addEventListener('click',()=>{
+        let r = getRandomInt(0, toggles.length);
+        toggles[r].checked = !toggles[r].checked;
+    })
+}
+
